@@ -324,4 +324,8 @@
     inline-size: 257px;
     block-size: 38px;
   }
+
+  .tag {
+    inset-inline-end: 10px;
+  }
 }
