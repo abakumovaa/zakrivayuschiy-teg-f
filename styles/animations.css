@@ -21,7 +21,7 @@
 .theme-menu__button::after {
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, black);
   block-size: 2px;
   inline-size: calc(100% - 6px);
   transform: scaleX(0);
@@ -53,63 +53,33 @@
   transition: opacity 0.3s ease;
 }
 
-.card__like-button:focus {
+.main-button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
+.main-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color, black);
   transition: box-shadow 0.3s ease-out;
 }
 
-.card__like-button:hover {
-  color: var(--background-color);
+.main-button:hover {
+  color: var(--background-color, white);
   transition: color 1s ease;
 }
 
-.card__like-button::after {
+.main-button::after {
   content: "";
   position: absolute;
   inline-size: 100%;
   transform: scaleX(0);
   transform-origin: left;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, black);
   inset-block: 0;
   inset-inline-start: 0;
   transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:hover:after {
-  transform: scaleX(1);
-}
-
-.footer__button:focus {
-  outline: none;
-}
-
-.footer__button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
-  transition: box-shadow 0.3s ease-out;
-}
-
-.footer__button:hover {
-  color: var(--background-color);
-  transition: color 1s ease;
-}
-
-.footer__button::after {
-  content: "";
-  position: absolute;
-  inline-size: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  background-color: var(--accent-color);
-  inset-block: 0;
-  inset-inline-start: 0;
-  transition: transform 0.5s ease-in-out;
-}
-
-.footer__button:hover:after {
+.main-button:hover:after {
   transform: scaleX(1);
 }
 
@@ -118,53 +88,53 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--accent-color, black);
   outline-offset: -2px;
   transition: border 0.3s ease;
 }
 
 .like-icon .core {
-  fill: var(--background-color);
+  fill: var(--background-color, white);
   transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon .main-body {
-  fill: var(--background-color);
+  fill: var(--background-color, white);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .core {
-  fill: var(--contour-color);
+  fill: var(--contour-color, black);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--contour-color);
+  fill: var(--contour-color, black);
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:active .core {
-  fill: var(--heart-color);
+  fill: var(--heart-color, red);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  fill: var(--heart-color);
+  fill: var(--heart-color, red);
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--heart-color);
+  fill: var(--heart-color, red);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-color);
+  fill: var(--heart-color, red);
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--heart-color);
+  fill: var(--heart-color, red);
   transition: fill 0.3s 0.06s linear;
 }
 
