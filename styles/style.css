@@ -32,7 +32,11 @@
 }
 
 .header {
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); /* clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);*/
+  inline-size: clamp(
+    23.4375rem,
+    16.2852rem + 30.5164vw,
+    43.75rem
+  ); /* clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);*/
   /* block-size: clamp(20.438rem, 19.535rem + 3.85vi, 23rem); */
   display: flex;
   flex-direction: column;
@@ -42,7 +46,7 @@
   text-transform: uppercase;
   background-color: var(--background-color, white);
   border: 2px solid var(--accent-color, black);
-   /* padding-block-start: clamp(
+  /* padding-block-start: clamp(
     7.5rem,
     7.149rem + 1.5023vw,
     8.5rem
