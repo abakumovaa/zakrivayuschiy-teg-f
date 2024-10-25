@@ -192,6 +192,8 @@
 
 .card__icon-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 38px; /* добавлено для центрирования иконки и корректного значения высоты */
   border: none;
   outline: none;
@@ -201,6 +203,7 @@
 
 .like-icon {
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .card__like-button {
@@ -233,7 +236,7 @@
 /* -------- FOOTER & DIALOG -------------- */
 
 .save {
-  margin-block-start: 50px;
+  /* margin-block-start: 50px; */
   display: flex;
   justify-content: center;
 }
@@ -263,7 +266,8 @@
   border: 2px solid var(--accent-color, black);
   gap: 30px;
   inline-size: 357px;
-  padding: 30px;
+  padding-inline: 30px;
+  padding-block: 30px;
 }
 
 #dialog[open]::backdrop {
@@ -300,7 +304,7 @@
 
 /* --------------------- ADAPTIVE ---------------- */
 
-@media (width <= 375px) {
+@media (width <= 376px) {
   .header__subtitle {
     margin-block-end: 25px;
   }
@@ -309,10 +313,10 @@
     padding-left: 5px;
   }
 
-  .footer__button {
+  .save__button {
     flex-direction: column;
-    inline-size: 306px;
-    block-size: 84px;
+    inline-size: 308px;
+    block-size: 82px;
   }
 
   .floppy {
@@ -321,11 +325,15 @@
   }
 
   .dialog__button {
-    inline-size: 257px;
+    inline-size: 100%;
     block-size: 38px;
   }
 
   .tag {
     inset-inline-end: 10px;
+  }
+
+  #dialog[open] {
+    padding-inline: 40px;
   }
 }
